@@ -1,0 +1,46 @@
+.q-card {
+  border: 1px solid rgba(0, 0, 0, 0.125) !important;
+  border-radius: 4px !important;
+  -webkit-box-shadow: 0 0 0.25rem rgb(8 18 34 / 10%) !important;
+  box-shadow: 0 0 0.25rem rgb(8 18 34 / 10%) !important;
+  background-color: var(--bg-card) !important;
+
+}
+.q-card .card-title {
+  font-size: 18px !important;
+  margin: 0 0 10px 0 !important;
+  font-weight: bold !important;
+  color: var(--color-card-title);
+}
+
+.q-card .sub-title {
+  font-size: 14px !important;
+  color: $grey-7 !important;
+}
+
+.q-btn {
+  border-radius: 8px !important;
+}
+
+.bg__drawer {
+  background-color: var(--bg-drawer);
+  color:#67758E;
+}
+
+.bg__app {
+  background-color: var(--bg-app);
+}
+
+
+.q-table-header {
+  color: #B7BBC7 !important;
+}
+
+.q-card-table {
+  background-color: var(--bg-card) !important;
+  padding: 20px !important;
+  border-radius: 8px !important;
+  -webkit-box-shadow: 0 0 0.25rem rgb(8 18 34 / 10%) !important;
+  box-shadow: 0 0 0.25rem rgb(8 18 34 / 10%) !important;
+  color: #8e949f!important;
+}
