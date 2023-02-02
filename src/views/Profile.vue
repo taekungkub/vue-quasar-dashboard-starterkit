@@ -1,8 +1,8 @@
 <template>
-  <q-img src="https://cdn.quasar.dev/img/parallax2.jpg" height="250px" class="relative" :style="{ zIndex: '-10px' }"> </q-img>
+  <!-- <q-img src="https://cdn.quasar.dev/img/parallax2.jpg" height="250px" class="relative" :style="{ zIndex: '-10px' }"> </q-img> -->
 
   <div class="q-pa-lg">
-    <div class="row q-col-gutter-md" :style="{ marginTop: '-150px' }">
+    <div class="row q-col-gutter-md">
       <div class="col-12 col-md-4">
         <q-card>
           <q-card-section>
@@ -41,6 +41,11 @@
       </div>
 
       <div class="col-12 col-md-8">
+        <div class="flex items-center q-mb-md q-gutter-sm">
+          <q-btn color="primary" label="Account"></q-btn>
+          <q-btn flat color="primary" label="Security"></q-btn>
+          <q-btn flat color="primary" label="Billing & Plan"></q-btn>
+        </div>
         <q-card>
           <q-card-section>
             <div class="card-title">Profile Infomation</div>

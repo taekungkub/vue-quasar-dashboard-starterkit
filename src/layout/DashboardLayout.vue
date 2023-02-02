@@ -1,6 +1,8 @@
 <template>
-  <q-layout view="lhh LpR lFf" class="bg__app">
+  <q-layout view="lhr lpr lfr" class="bg__app">
     <Sidebar />
+
+    <SettingSidebar />
 
     <q-page-container>
       <div>
@@ -11,6 +13,7 @@
 </template>
 
 <script setup lang="ts">
+import SettingSidebar from "../components/SettingSidebar.vue";
 import Sidebar from "../components/Sidebar.vue";
 </script>
 

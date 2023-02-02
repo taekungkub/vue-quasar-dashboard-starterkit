@@ -9,7 +9,7 @@
           <q-btn round flat icon="fa-solid fa-moon" size="sm" v-else @click="toggleDark()"> </q-btn>
         </div>
         <q-btn round flat icon="fa-solid fa-bell" size="sm"> </q-btn>
-        <q-btn round flat icon="fa-solid fa-gear" size="sm" class="q-mx-sm"> </q-btn>
+        <q-btn round flat icon="fa-solid fa-gear" size="sm" class="q-mx-sm" @click="setting.isSettingDrawer = !setting.isSettingDrawer"> </q-btn>
 
         <div class="q-gutter-sm row items-center no-wrap">
           <q-btn flat>
