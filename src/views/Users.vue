@@ -9,7 +9,16 @@
       <q-btn color="primary" label="+ New User" no-caps />
     </div>
 
-    <q-table :table-header-class="'q-table-header'" :card-class="'q-card-table'" :rows="userList.users" :columns="columns" row-key="id" color="primary">
+    <q-table
+      :table-header-class="'q-table-header'"
+      :card-class="'q-card-table'"
+      :rows="userList.users"
+      :columns="columns"
+      row-key="id"
+      color="primary"
+      :pagination.sync="pagination"
+      :filter="searchQuery"
+    >
       <template v-slot:top-left>
         <q-input v-model="searchQuery" dense outlined label="Search"></q-input>
       </template>
@@ -55,12 +64,20 @@
           </q-td>
         </q-tr>
       </template>
+
+      <template #bottom="props">
+        <div class="col-12">
+          <div class="q-pa-lg flex flex-center">
+            <q-pagination v-model="props.pagination.page" :max="props.pagesNumber" :max-pages="6" :boundary-numbers="false" boundary-links> </q-pagination>
+          </div>
+        </div>
+      </template>
     </q-table>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { computed, ref } from "vue";
 import userList from "../config/userList";
 
 const columns = ref([
@@ -69,6 +86,8 @@ const columns = ref([
     required: true,
     label: "NAME",
     align: "left",
+    field: (row: any) => row.firstName,
+    format: (val: any) => `${val}`,
   },
 
   {
@@ -120,6 +139,18 @@ const columns = ref([
 ]);
 
 const searchQuery = ref("");
+
+const pagination = ref({
+  sortBy: "",
+  descending: false,
+  page: 1,
+  rowsPerPage: 5,
+  // rowsNumber: xx if getting data from a server
+});
+
+const pagesNumber = computed(() => {
+  return Math.ceil(userList.users.length / pagination.value.rowsPerPage);
+});
 </script>
 
 <style scoped></style>

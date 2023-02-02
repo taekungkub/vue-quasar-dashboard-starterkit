@@ -44,3 +44,14 @@
   box-shadow: 0 0 0.25rem rgb(8 18 34 / 10%) !important;
   color: #8e949f!important;
 }
+
+.text-muted {
+  color: #878a99;
+}
+
+.q-menu {
+  background-color: var(--bg-card) !important;
+  border-radius: 8px !important;
+  -webkit-box-shadow: 0 0 0.25rem rgba(6, 16, 31, 0.1) !important;
+  box-shadow:0 0 0.25rem rgba(6, 16, 31, 0.1) !important;
+}

@@ -182,8 +182,4 @@ const settingState = reactive({
     align-items: start;
   }
 }
-
-.text-muted {
-  color: #878a99;
-}
 </style>

@@ -11,7 +11,15 @@
       <q-btn outline color="primary" label="Export" no-caps />
     </div>
 
-    <q-table :table-header-class="'q-table-header'" :card-class="'q-card-table'" :rows="productList.products" :columns="columns" row-key="id" color="primary">
+    <q-table
+      :table-header-class="'q-table-header'"
+      :card-class="'q-card-table'"
+      :rows="productList.products"
+      :columns="columns"
+      row-key="id"
+      color="primary"
+      :filter="searchQuery"
+    >
       <template v-slot:top-left>
         <q-input v-model="searchQuery" dense outlined label="Search"></q-input>
       </template>
@@ -65,6 +73,8 @@ const columns = ref([
     required: true,
     label: "NAME",
     align: "left",
+    field: (row: any) => row.title,
+    format: (val: any) => `${val}`,
   },
 
   {
