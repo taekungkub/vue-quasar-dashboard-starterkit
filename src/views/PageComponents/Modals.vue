@@ -33,12 +33,24 @@
             </q-card-section>
           </q-card>
         </div>
+
+        <div class="col-12 col-sm-4">
+          <q-card class="flex flex-center text-center">
+            <q-card-section class="q-gutter-sm">
+              <q-icon name="fa-solid fa-envelope-open" size="lg" color="secondary"></q-icon>
+              <div class="text-h6">Subscribe</div>
+              <div class="text-caption">Subscribe our newletter and get notification to stay update.</div>
+              <q-btn color="dark" label="Show" @click="modalSubscribeRef?.show"></q-btn>
+            </q-card-section>
+          </q-card>
+        </div>
       </div>
     </div>
 
     <ModalEditUser @submit="(userData) => getDataFromModal(userData)" />
     <ModalOTP @submit="(userData) => getDataFromModal(userData)" />
     <ModalShareProject @submit="(userData) => getDataFromModal(userData)" />
+    <ModalSubscribe @submit="(userData) => getDataFromModal(userData)" />
   </div>
 </template>
 
@@ -46,9 +58,10 @@
 import ModalEditUser from "../../components/ModalEditUser.vue";
 import ModalOTP from "../../components/ModalOTP.vue";
 import ModalShareProject from "../../components/ModalShareProject.vue";
+import ModalSubscribe from "../../components/ModalSubscribe.vue";
 
 import useModals from "../../hooks/useModals";
-const { modalEditUserRef, modalOtpRef, modalShareProjectRef } = useModals();
+const { modalEditUserRef, modalOtpRef, modalShareProjectRef, modalSubscribeRef } = useModals();
 
 function getDataFromModal(data: any) {
   console.log(data);

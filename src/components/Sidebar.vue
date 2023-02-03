@@ -22,8 +22,8 @@
             </div>
             <q-tooltip>Account</q-tooltip>
 
-            <q-menu auto-close anchor="bottom right" self="top right">
-              <q-list style="min-width: 120px">
+            <q-menu auto-close anchor="bottom right" self="top right" transition-show="jump-down" transition-hide="jump-up">
+              <q-list style="min-width: 150px">
                 <q-item clickable @click="$router.push('/profile')">
                   <q-item-section>
                     <div>

@@ -1,5 +1,5 @@
 <template>
-  <q-dialog ref="modalOtpRef" transition-show="jump-down" transition-hide="jump-up">
+  <q-dialog ref="modalSubscribeRef" transition-show="jump-down" transition-hide="jump-up">
     <q-card class="full-width" style="max-width: 500px">
       <q-card-section class="flex items-center q-pb-none">
         <q-space />
@@ -8,26 +8,20 @@
 
       <q-card-section>
         <div class="text-center">
-          <div class="text-h5">Enable One Time Password</div>
+          <q-avatar size="70px" font-size="32px" color="grey-3" text-color="primary" icon="fa-solid fa-envelope-open" class="q-mb-md" />
+
+          <div class="text-h5">Subscribe !</div>
+          <div class="text-muted text-subtitle q-mt-sm">Subscribe our newletter and get notification to stay update.</div>
         </div>
 
-        <div class="q-mt-lg q-mb-lg">
-          <div>Verify Your Mobile Number for SMS</div>
-          <div>Enter your mobile phone number with country code and we will send you a verification code.</div>
-        </div>
+        <br />
+
         <q-form @submit="onSubmit">
           <div class="row q-col-gutter-md">
             <div class="col-12">
-              <q-input
-                outlined
-                v-model="formState.phonenumber"
-                mask="### - ### - ####"
-                placeholder="xxx - xxx - xxxx"
-                lazy-rules
-                :rules="[(val) => (val && val.length > 0) || 'Please type something']"
-              >
-                <template v-slot:prepend>
-                  <span class="text-body2">+66</span>
+              <q-input outlined v-model="formState.email" lazy-rules :rules="[(val) => (val && val.length > 0) || 'Please type something']">
+                <template #append>
+                  <q-icon name="fa-solid fa-paper-plane" color="secondary"></q-icon>
                 </template>
               </q-input>
             </div>
@@ -48,21 +42,12 @@ import { reactive } from "vue";
 import useModals from "../hooks/useModals";
 
 const $q = useQuasar();
-const { modalOtpRef } = useModals();
+const { modalSubscribeRef } = useModals();
 
 const emit = defineEmits(["submit"]);
 
 const formState = reactive({
-  fname: "",
-  lname: "",
-  phonenumber: "",
   email: "Dragonskymonster@gmaik.com",
-  position: "",
-  displayname: "",
-  language: "",
-  gender: undefined,
-  birthday: undefined,
-  files: undefined,
 });
 
 function onSubmit() {
