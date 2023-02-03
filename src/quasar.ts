@@ -8,8 +8,8 @@ import "@quasar/extras/fontawesome-v6/fontawesome-v6.css";
 import "@quasar/extras/material-icons/material-icons.css";
 
 // A few examples for animations from Animate.css:
-// import @quasar/extras/animate/fadeIn.css
-// import @quasar/extras/animate/fadeOut.css
+// import "@quasar/extras/animate/fadeIn.css"
+// import "@quasar/extras/animate/fadeOut.css"
 
 // Import Quasar css
 import "quasar/src/css/index.sass";
