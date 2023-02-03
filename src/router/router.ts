@@ -4,6 +4,8 @@ import Home from "../views/Home.vue";
 
 const routes = [
   {
+    path: "/",
+    name: "DashboadLayout",
     meta: {
       layout: "admin",
     },
@@ -34,9 +36,26 @@ const routes = [
         component: () => import("../views/Users.vue"),
       },
       {
-        path: "/products",
+        path: "/carlendar",
+        name: "Carlendar",
+        component: () => import("../views/Carlendar.vue"),
+      },
+      {
+        path: "/invoice",
+        name: "Invoice",
+        component: () => import("../views/Invoice.vue"),
+      },
+
+      // end single
+      {
+        path: "/ecommerce/products",
         name: "Products",
-        component: () => import("../views/Products.vue"),
+        component: () => import("../views/Ecommerce/Products.vue"),
+      },
+      {
+        path: "/ecommerce/add-product",
+        name: "AddProduct",
+        component: () => import("../views/Ecommerce/AddProduct.vue"),
       },
 
       {
@@ -56,6 +75,8 @@ const routes = [
   },
 
   {
+    path: "/",
+    name: "EmptyLayout",
     meta: {
       layout: "empty",
     },

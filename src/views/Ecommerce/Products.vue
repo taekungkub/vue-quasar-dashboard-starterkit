@@ -2,7 +2,7 @@
   <div class="q-pa-lg">
     <div class="row q-gutter-sm items-center q-mb-md">
       <div>
-        <div class="text-h6 font-medium">Product List</div>
+        <h6>Product List</h6>
         <div class="text-body2">A lightweight, extendable, dependency-free javascript HTML table plugin. .</div>
       </div>
       <q-space />
@@ -66,10 +66,11 @@
 </template>
 
 <script setup lang="ts">
+import { QTableProps } from "quasar";
 import { ref } from "vue";
-import productList from "../config/productList";
+import productList from "../../config/productList";
 
-const columns = ref([
+const columns = ref<QTableProps["columns"]>([
   {
     name: "name",
     required: true,
@@ -119,6 +120,8 @@ const columns = ref([
     required: true,
     label: "STATUS",
     align: "left",
+    field: (row: any) => row.status,
+    format: (val: any) => `${val}`,
   },
   {
     name: "rating",

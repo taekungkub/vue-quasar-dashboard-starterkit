@@ -1,3 +1,5 @@
+
+
 .q-card {
   border: 1px solid rgba(0, 0, 0, 0.125) !important;
   border-radius: 8px !important;
@@ -7,15 +9,16 @@
 
 }
 .q-card .card-title {
-  font-size: 18px !important;
-  margin: 0 0 10px 0 !important;
-  font-weight: 500 !important;
+  font-size: 18px;
+  margin: 0 0 7px 0;
+  font-weight: 600;
   color: var(--color-card-title);
 }
 
-.q-card .sub-title {
-  font-size: 14px !important;
-  color: $grey-7 !important;
+.q-card .card-subtitle {
+  font-size: 14px;
+  color: var(--color-card-subtitle);
+  margin-bottom: 24px;
 }
 
 .q-btn {
@@ -24,7 +27,10 @@
 
 .bg__drawer {
   background-color: var(--bg-drawer);
-  color:#67758E;
+}
+
+.bg__drawer .q-item {
+  color: var(--color-drawer);
 }
 
 .bg__app {
@@ -42,9 +48,6 @@
   color: #8e949f!important;
 }
 
-.text-muted {
-  color: #878a99;
-}
 
 .q-menu {
   background-color: var(--bg-card) !important;

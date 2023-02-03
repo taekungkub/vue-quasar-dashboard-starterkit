@@ -2,7 +2,7 @@
   <div class="q-pa-md q-gutter-sm">
     <div class="text-h3 text-center">Overview</div>
 
-    <div class="text-21 font-medium q-mt-lg">Base</div>
+    <h6 class="q-mt-lg">Base</h6>
     <q-btn color="white" text-color="black" label="Standard" />
     <q-btn color="primary" label="Primary" />
     <q-btn color="secondary" label="Secondary" />
@@ -12,7 +12,7 @@
     <q-btn color="positive" label="positive" />
     <q-btn color="negative" label="negative" />
     <q-btn color="dark" label="Dark" />
-    <div class="text-21 font-medium q-mt-lg">Style</div>
+    <h6 class="q-mt-lg">Style</h6>
     <q-btn color="white" text-color="black" label="Standard" />
     <q-btn color="primary" label="Primary" />
     <q-btn color="secondary" label="Secondary" />
@@ -22,7 +22,7 @@
     <q-btn color="purple" label="Purple" />
     <q-btn color="black" label="Black" />
 
-    <div class="text-21 font-medium q-mt-lg">Notify</div>
+    <h6 class="q-mt-lg">Notify</h6>
     <q-btn no-caps unelevated color="positive" @click="triggerPositive" label="Trigger 'positive'" />
     <q-btn no-caps unelevated color="negative" @click="triggerNegative" label="Trigger 'negative'" />
     <q-btn no-caps unelevated color="warning" text-color="dark" @click="triggerWarning" label="Trigger 'warning'" />

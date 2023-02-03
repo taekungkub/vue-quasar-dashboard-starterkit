@@ -2,14 +2,14 @@
   <div>
     <q-header>
       <q-toolbar class="GNL__toolbar">
-        <q-btn dense flat round icon="fa-solid fa-bars" class="q-pa-md" @click="leftDrawerOpen = !leftDrawerOpen" />
+        <q-btn dense flat round icon="fa-solid fa-bars" class="q-pa-md" @click="setting.leftDrawerOpen = !setting.leftDrawerOpen" />
         <q-space />
         <div>
           <q-btn round flat icon="fa-solid fa-sun" size="sm" v-if="isDark" @click="toggleDark()"> </q-btn>
           <q-btn round flat icon="fa-solid fa-moon" size="sm" v-else @click="toggleDark()"> </q-btn>
         </div>
         <q-btn round flat icon="fa-solid fa-bell" size="sm"> </q-btn>
-        <q-btn round flat icon="fa-solid fa-gear" size="sm" class="q-mx-sm" @click="setting.isSettingDrawer = !setting.isSettingDrawer"> </q-btn>
+        <q-btn round flat icon="fa-solid fa-gear" size="sm" class="q-mx-sm" @click="setting.settingDrawerOpen = !setting.settingDrawerOpen"> </q-btn>
 
         <div class="q-gutter-sm row items-center no-wrap">
           <q-btn flat>
@@ -48,7 +48,7 @@
       </q-toolbar>
     </q-header>
 
-    <q-drawer show-if-above v-model="leftDrawerOpen" side="left" :width="250" :class="'bg__drawer'">
+    <q-drawer show-if-above v-model="setting.leftDrawerOpen" side="left" :width="250" :class="'bg__drawer'">
       <!-- drawer content -->
       <q-scroll-area class="fit">
         <q-list class="GNL__drawer">
@@ -116,8 +116,6 @@ const isDark = useDark({
   },
 });
 const toggleDark = useToggle(isDark);
-
-const leftDrawerOpen = ref(false);
 </script>
 
 <style lang="scss" scoped>
@@ -129,6 +127,10 @@ const leftDrawerOpen = ref(false);
 .GNL__drawer .q-expansion-item {
   margin-top: 10px !important;
   border-radius: 4px !important;
+
+  html.dark &:hover {
+    color: $grey-3;
+  }
 }
 .menu-link {
   color: $primary !important;

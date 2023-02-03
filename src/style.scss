@@ -18,7 +18,9 @@
   --color-app:#{$color-app};
   --bg-drawer: white;
   --bg-card: white;
-  --color-card-title :#{$grey-7};
+  --color-drawer:#67758E;
+  --color-card-title :#6D7378;
+  --color-card-subtitle:#787C91;
 }
 
 html.dark {
@@ -26,8 +28,9 @@ html.dark {
   --color-app: #{$color-app-dark};
   --bg-drawer: #{$bg-drawer};
   --bg-card:#{$bg-card};
+  --color-drawer:#a6b0cf;
   --color-card-title:#{$grey-4};
-
+  --color-card-subtitle:#{$grey-4};
 }
 
 #app {
@@ -66,10 +69,14 @@ button:focus-visible {
 
 
 
-.font-medium {
-    font-weight: 500;
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
 }
-.text-21 {
-    font-size: 21px;
-    line-height: 25.6px;
+
+
+.text-muted {
+  color: #878a99;
 }

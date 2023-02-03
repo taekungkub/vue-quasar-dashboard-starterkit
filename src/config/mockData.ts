@@ -21,23 +21,34 @@ export const menuList = [
   },
 
   {
-    title: "Product List",
-    path: "/products",
-    icon: "fa-solid fa-bag-shopping",
+    title: "Carlendar",
+    path: "/carlendar",
+    icon: "fa-solid fa-calendar-days",
   },
 
   {
-    title: "Components",
-    path: "/components",
+    title: "Invoice",
+    path: "/invoice",
+    icon: "fa-solid fa-file-lines",
+  },
+
+  {
+    title: "Ecommerce",
+    path: "/ecommerce",
     isDropdown: true,
-    icon: "fa-solid fa-clover",
+    icon: "fa-solid fa-bag-shopping",
     children: [
       {
-        title: "Modals",
-        path: "/components/modals",
+        title: "Products",
+        path: "/ecommerce/products",
+      },
+      {
+        title: "AddProduct",
+        path: "/ecommerce/add-product",
       },
     ],
   },
+
   {
     title: "Authentication",
     path: "/auth",
@@ -63,6 +74,19 @@ export const menuList = [
       {
         title: "Verify",
         path: "/verify",
+      },
+    ],
+  },
+
+  {
+    title: "Components",
+    path: "/components",
+    isDropdown: true,
+    icon: "fa-solid fa-clover",
+    children: [
+      {
+        title: "Modals",
+        path: "/components/modals",
       },
     ],
   },

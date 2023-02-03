@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="lhr lpr lfr" class="bg__app">
+  <q-layout view="lHr Lpr lFr" class="bg__app">
     <Sidebar />
 
     <SettingSidebar />

@@ -5,8 +5,8 @@ import { Dark } from "quasar";
 export const useSettingStore = defineStore("setting", {
   state: () => ({
     currentTheme: "",
-    miniSidebar: false,
-    isSettingDrawer: false,
+    leftDrawerOpen: false,
+    settingDrawerOpen: false,
   }),
   actions: {
     initTheme() {

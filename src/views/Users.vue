@@ -101,12 +101,13 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import userList from "../config/userList";
+import { QTableProps } from "quasar";
 
 const selected1 = ref("");
 const selected2 = ref("");
 const selected3 = ref("");
 
-const columns = ref([
+const columns = ref<QTableProps["columns"]>([
   {
     name: "name",
     required: true,
@@ -120,7 +121,7 @@ const columns = ref([
     name: "email",
     required: true,
     label: "EMAIL",
-    align: "left",
+
     field: (row: any) => row.email,
     format: (val: any) => `${val}`,
   },
@@ -147,12 +148,16 @@ const columns = ref([
     required: true,
     label: "VERIFIED",
     align: "left",
+    field: (row: any) => row.verified,
+    format: (val: any) => `${val}`,
   },
   {
     name: "status",
     required: true,
     label: "STATUS",
     align: "left",
+    field: (row: any) => row.status,
+    format: (val: any) => `${val}`,
   },
 
   {
@@ -163,7 +168,6 @@ const columns = ref([
     format: (val: any) => `${val}`,
   },
 ]);
-
 const searchQuery = ref("");
 
 const pagination = ref({
