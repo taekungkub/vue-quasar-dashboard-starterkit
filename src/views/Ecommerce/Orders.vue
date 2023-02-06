@@ -25,7 +25,7 @@
         </template>
 
         <template v-slot:top-right>
-          <q-btn color="positive" label="+ Add new order" no-caps />
+          <q-btn color="primary" label="+ Add new order" no-caps />
         </template>
 
         <template #header-selection>#</template>
@@ -41,9 +41,9 @@
               </span>
 
               <span v-else-if="col.name === 'payment_status'">
-                <q-badge outline color="positive" v-if="props.row.payment_status === 'Paid'"> {{ props.row.payment_status }} </q-badge>
-                <q-badge outline color="negative" v-else-if="props.row.payment_status === 'Chargeback'"> {{ props.row.payment_status }} </q-badge>
-                <q-badge outline color="warning" v-else-if="props.row.payment_status === 'Refund'"> {{ props.row.payment_status }} </q-badge>
+                <q-badge color="positive" v-if="props.row.payment_status === 'Paid'"> {{ props.row.payment_status }} </q-badge>
+                <q-badge color="negative" v-else-if="props.row.payment_status === 'Chargeback'"> {{ props.row.payment_status }} </q-badge>
+                <q-badge color="warning" v-else-if="props.row.payment_status === 'Refund'"> {{ props.row.payment_status }} </q-badge>
               </span>
 
               <span v-else-if="col.name === 'actions'">

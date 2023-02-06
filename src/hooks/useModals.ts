@@ -5,6 +5,7 @@ const modalEditUserRef = ref<InstanceType<typeof QDialog> | null>(null);
 const modalOtpRef = ref<InstanceType<typeof QDialog> | null>(null);
 const modalShareProjectRef = ref<InstanceType<typeof QDialog> | null>(null);
 const modalSubscribeRef = ref<InstanceType<typeof QDialog> | null>(null);
+const modalDigicodeRef = ref<InstanceType<typeof QDialog> | null>(null);
 
 export default function useModals() {
   return {
@@ -12,5 +13,6 @@ export default function useModals() {
     modalOtpRef,
     modalShareProjectRef,
     modalSubscribeRef,
+    modalDigicodeRef,
   };
 }

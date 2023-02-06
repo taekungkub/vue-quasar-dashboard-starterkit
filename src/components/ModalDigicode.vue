@@ -1,5 +1,5 @@
 <template>
-  <q-dialog ref="modalSubscribeRef" transition-show="jump-down" transition-hide="jump-up">
+  <q-dialog ref="modalDigicodeRef" transition-show="jump-down" transition-hide="jump-up">
     <q-card class="full-width" style="max-width: 500px">
       <q-card-section class="flex items-center q-pb-none">
         <q-space />
@@ -8,20 +8,23 @@
 
       <q-card-section>
         <div class="text-center">
-          <q-avatar size="70px" font-size="32px" color="grey-3" text-color="primary" icon="fa-solid fa-envelope-open" class="q-mb-md" />
-
-          <div class="text-h5">Subscribe !</div>
-          <div class="text-muted text-subtitle q-mt-sm">Subscribe our newletter and get notification to stay update.</div>
+          <div class="text-h5">Verify</div>
+          <div class="text-muted text-subtitle q-mt-sm">Please enter the 6 digit code sent to example@abc.com</div>
         </div>
-
         <br />
-
         <q-form @submit="onSubmit">
           <div class="row q-col-gutter-md">
             <div class="col-12">
-              <q-input outlined v-model="formState.email" lazy-rules :rules="[(val) => (val && val.length > 0) || 'Please type something']">
-                <template #append>
-                  <q-icon name="fa-solid fa-paper-plane" color="secondary"></q-icon>
+              <q-input
+                outlined
+                v-model="formState.code"
+                mask="### - ###"
+                placeholder="xxx - xxx"
+                lazy-rules
+                :rules="[(val) => (val && val.length > 0) || 'Please type something']"
+              >
+                <template v-slot:prepend>
+                  <span class="text-body2">Code</span>
                 </template>
               </q-input>
             </div>
@@ -31,6 +34,8 @@
             <q-btn type="submit" color="primary" label="Submit" /> <q-btn flat color="primary" label="Cancel" v-close-popup />
           </div>
         </q-form>
+        <br />
+        <div class="text-center text-muted">Haven't received it? <span class="cursor-pointer text-primary">Resend a new code.</span></div>
       </q-card-section>
     </q-card>
   </q-dialog>
@@ -42,12 +47,12 @@ import { reactive } from "vue";
 import useModals from "../hooks/useModals";
 
 const $q = useQuasar();
-const { modalSubscribeRef } = useModals();
+const { modalDigicodeRef } = useModals();
 
 const emit = defineEmits(["submit"]);
 
 const formState = reactive({
-  email: "Dragonskymonster@gmaik.com",
+  code: "",
 });
 
 function onSubmit() {

@@ -9,10 +9,10 @@
       <q-card-section>
         <div class="text-center">
           <div class="text-h5">Enable One Time Password</div>
+          <div class="text-muted text-subtitle q-mt-sm">Verify Your Mobile Number for SMS</div>
         </div>
 
         <div class="q-mt-lg q-mb-lg">
-          <div>Verify Your Mobile Number for SMS</div>
           <div>Enter your mobile phone number with country code and we will send you a verification code.</div>
         </div>
         <q-form @submit="onSubmit">
@@ -53,16 +53,7 @@ const { modalOtpRef } = useModals();
 const emit = defineEmits(["submit"]);
 
 const formState = reactive({
-  fname: "",
-  lname: "",
   phonenumber: "",
-  email: "Dragonskymonster@gmaik.com",
-  position: "",
-  displayname: "",
-  language: "",
-  gender: undefined,
-  birthday: undefined,
-  files: undefined,
 });
 
 function onSubmit() {

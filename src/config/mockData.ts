@@ -83,6 +83,10 @@ export const menuList = [
         title: "Verify",
         path: "/verify",
       },
+      {
+        title: "Confirm Mail",
+        path: "/confirm-mail",
+      },
     ],
   },
 

@@ -77,6 +77,19 @@
                   </q-radio>
                 </div>
 
+                <div class="q-gutter-y-lg">
+                  <q-input label="Card Number" mask="####- #### - ####" placeholder="0000 - 0000 - 0000"></q-input>
+                  <q-input label="Name on card"></q-input>
+                  <div class="row q-col-gutter-md">
+                    <div class="col-6">
+                      <q-input label="Expiry Date" mask="##/##" placeholder="MM/YY"></q-input>
+                    </div>
+                    <div class="col-6">
+                      <q-input label=" CVV Code" mask="###"></q-input>
+                    </div>
+                  </div>
+                </div>
+
                 <q-btn class="q-mt-md" label="NEXT" color="primary" @click="formState.currentTab = formState.enumTab.confirm"></q-btn>
               </div>
               <div v-else-if="formState.currentTab === formState.enumTab.confirm">

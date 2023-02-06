@@ -115,6 +115,12 @@ const routes = [
       },
 
       {
+        path: "/confirm-mail",
+        name: "ConfirmMail",
+        component: () => import("../views/Auth/ConfirmMail.vue"),
+      },
+
+      {
         path: "/resetpassword",
         name: "Resetpassword",
         component: () => import("../views/Auth/Resetpassword.vue"),
