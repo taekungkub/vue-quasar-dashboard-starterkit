@@ -8,7 +8,58 @@
           <q-btn round flat icon="fa-solid fa-sun" size="sm" v-if="isDark" @click="toggleDark()"> </q-btn>
           <q-btn round flat icon="fa-solid fa-moon" size="sm" v-else @click="toggleDark()"> </q-btn>
         </div>
-        <q-btn round flat icon="fa-solid fa-bell" size="sm"> </q-btn>
+        <q-btn round flat icon="fa-solid fa-bell" size="sm">
+          <q-menu auto-close anchor="bottom right" self="top right" transition-show="jump-down" transition-hide="jump-up">
+            <q-list style="max-width: 300px; min-width: 300px">
+              <q-item dense>
+                <q-item-section>Notifications</q-item-section>
+                <q-item-section avatar class="text-caption text-primary cursor-pointer"> View all </q-item-section>
+              </q-item>
+              <q-separator />
+
+              <q-scroll-area style="height: 200px; max-width: 300px; min-width: 300px">
+                <q-item clickable v-ripple class="q-py-md">
+                  <q-item-section avatar>
+                    <q-icon color="primary" name="fa-solid fa-cart-shopping" />
+                  </q-item-section>
+
+                  <q-item-section>
+                    <q-item-label>Your order is placed</q-item-label>
+                    <q-item-label class="text-caption">If several languages coalesce the grammar</q-item-label>
+                    <q-item-label caption>3 min ago</q-item-label>
+                  </q-item-section>
+                </q-item>
+                <q-item clickable v-ripple class="q-py-md">
+                  <q-item-section avatar>
+                    <q-icon color="primary" name="fa-solid fa-cart-shopping" />
+                  </q-item-section>
+
+                  <q-item-section>
+                    <q-item-label>Your order is placed</q-item-label>
+                    <q-item-label class="text-caption">If several languages coalesce the grammar</q-item-label>
+                    <q-item-label caption>3 min ago</q-item-label>
+                  </q-item-section>
+                </q-item>
+                <q-item clickable v-ripple class="q-py-md">
+                  <q-item-section avatar>
+                    <q-icon color="primary" name="fa-solid fa-cart-shopping" />
+                  </q-item-section>
+
+                  <q-item-section>
+                    <q-item-label>Your order is placed</q-item-label>
+                    <q-item-label class="text-caption">If several languages coalesce the grammar</q-item-label>
+                    <q-item-label caption>3 min ago</q-item-label>
+                  </q-item-section>
+                </q-item>
+              </q-scroll-area>
+              <q-separator />
+
+              <q-item dense class="text-center">
+                <q-item-section class="text-primary cursor-pointer">View more...</q-item-section>
+              </q-item>
+            </q-list>
+          </q-menu>
+        </q-btn>
         <q-btn round flat icon="fa-solid fa-gear" size="sm" class="q-mx-sm" @click="setting.settingDrawerOpen = !setting.settingDrawerOpen"> </q-btn>
 
         <div class="q-gutter-sm row items-center no-wrap">
