@@ -47,7 +47,7 @@ import TopSection from "./TopSection.vue";
 
   background-color: var(--bg-card);
   padding: 20px;
-  -webkit-box-shadow: 0 0 0.25rem rgb(8 18 34 / 10%) !important;
-  box-shadow: 0 0 0.25rem rgb(8 18 34 / 10%) !important;
+  -webkit-box-shadow: 0 0 0.25rem rgb(8 18 34 / 10%);
+  box-shadow: 0 0 0.25rem rgb(8 18 34 / 10%);
 }
 </style>

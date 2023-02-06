@@ -47,6 +47,10 @@ export const menuList = [
         path: "/ecommerce/add-product",
       },
       {
+        title: "Orders",
+        path: "/ecommerce/orders",
+      },
+      {
         title: "Checkout",
         path: "/ecommerce/checkout",
       },

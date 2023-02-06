@@ -1,10 +1,14 @@
 
 
 .q-card {
-  border: 1px solid rgba(0, 0, 0, 0.125) !important;
+  // border: 1px solid rgba(0, 0, 0, 0.125) !important;
   border-radius: 8px !important;
-  -webkit-box-shadow: 0 0 0.25rem rgb(8 18 34 / 10%) !important;
-  box-shadow: 0 0 0.25rem rgb(8 18 34 / 10%) !important;
+  border: none !important;
+
+  // -webkit-box-shadow: 0 0 0.25rem rgb(8 18 34 / 10%) !important;
+  // box-shadow: 0 0 0.25rem rgb(8 18 34 / 10%) !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
   background-color: var(--bg-card) !important;
 
 }
@@ -51,7 +55,7 @@
 
 .q-menu {
   background-color: var(--bg-card) !important;
-  border-radius: 8px !important;
+  border-radius: 4px !important;
   -webkit-box-shadow: 0 0 0.25rem rgba(6, 16, 31, 0.1) !important;
-  box-shadow:0 0 0.25rem rgba(6, 16, 31, 0.1) !important;
+  box-shadow:0 0 0.25rem rgba(6, 16, 31, 0.1) !important; 
 }
