@@ -140,4 +140,17 @@ export const menuList = [
       },
     ],
   },
+
+  {
+    title: "Test",
+    path: "/test",
+    isDropdown: true,
+    icon: "fa-solid fa-campground",
+    children: [
+      {
+        title: "Test1",
+        path: "/test",
+      },
+    ],
+  },
 ];
