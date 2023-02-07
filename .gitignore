@@ -24,5 +24,6 @@ dist-ssr
 *.sw?
 
 
-**/src/view/Test/*.vue
-**/src/Test/*.vue
+src/views/Test/*.vue
+
+
