@@ -56,6 +56,7 @@
 .q-menu {
   background-color: var(--bg-card) !important;
   border-radius: 4px !important;
-  -webkit-box-shadow: 0 0 0.25rem rgba(6, 16, 31, 0.1) !important;
-  box-shadow:0 0 0.25rem rgba(6, 16, 31, 0.1) !important; 
+  // -webkit-box-shadow: 0 0 0.25rem rgba(6, 16, 31, 0.1) !important;
+  // box-shadow:0 0 0.25rem rgba(6, 16, 31, 0.1) !important; 
+  box-shadow: 0 1rem 3rem rgb(0 0 0 / 18%) !important; 
 }

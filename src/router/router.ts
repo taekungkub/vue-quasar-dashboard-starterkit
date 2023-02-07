@@ -82,6 +82,25 @@ const routes = [
           },
         ],
       },
+
+      {
+        path: "/projects",
+        name: "Projects",
+        redirect: "/projects/project-grid",
+        component: () => import("../views/Projects/index.vue"),
+        children: [
+          {
+            path: "/projects/project-grid",
+            name: "ProjectGrid",
+            component: () => import("../views/Projects/ProjectGrid.vue"),
+          },
+          {
+            path: "/projects/project-list",
+            name: "ProjectList",
+            component: () => import("../views/Projects/ProjectList.vue"),
+          },
+        ],
+      },
     ],
   },
 

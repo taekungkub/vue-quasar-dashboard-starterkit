@@ -104,6 +104,23 @@ export const menuList = [
   },
 
   {
+    title: "Projects",
+    path: "/projects",
+    isDropdown: true,
+    icon: "fa-solid fa-umbrella",
+    children: [
+      {
+        title: "Project Grid",
+        path: "/projects/project-grid",
+      },
+      {
+        title: "Project List",
+        path: "/projects/project-list",
+      },
+    ],
+  },
+
+  {
     title: "Exception",
     path: "/exception",
     isDropdown: true,

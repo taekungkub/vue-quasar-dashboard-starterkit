@@ -9,6 +9,7 @@
           <q-btn round flat icon="fa-solid fa-moon" size="sm" v-else @click="toggleDark()"> </q-btn>
         </div>
         <q-btn round flat icon="fa-solid fa-bell" size="sm">
+          <q-badge color="red" floating transparent>3</q-badge>
           <q-menu auto-close anchor="bottom right" self="top right" transition-show="jump-down" transition-hide="jump-up">
             <q-list style="max-width: 300px; min-width: 300px">
               <q-item dense>
@@ -30,14 +31,12 @@
                   </q-item-section>
                 </q-item>
                 <q-item clickable v-ripple class="q-py-md">
-                  <q-item-section avatar>
-                    <q-icon color="primary" name="fa-solid fa-cart-shopping" />
-                  </q-item-section>
+                  <q-item-section avatar> <q-icon color="positive" name="fa-solid fa-circle-check" /> </q-item-section>
 
                   <q-item-section>
-                    <q-item-label>Your order is placed</q-item-label>
+                    <q-item-label>Your item is shiped</q-item-label>
                     <q-item-label class="text-caption">If several languages coalesce the grammar</q-item-label>
-                    <q-item-label caption>3 min ago</q-item-label>
+                    <q-item-label caption>1 hour ago</q-item-label>
                   </q-item-section>
                 </q-item>
                 <q-item clickable v-ripple class="q-py-md">
