@@ -151,6 +151,14 @@ export const menuList = [
         title: "Test1",
         path: "/test",
       },
+      {
+        title: "Collection",
+        path: "/collection",
+      },
+      {
+        title: "Collection 2",
+        path: "/collection2",
+      },
     ],
   },
 ];

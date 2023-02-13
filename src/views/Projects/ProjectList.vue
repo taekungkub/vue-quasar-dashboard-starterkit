@@ -95,6 +95,16 @@ import projectList from "@/config/projectList";
   }
 }
 
+html.dark .table {
+  thead {
+    background-color: $bg-card;
+  }
+
+  tbody tr td {
+    background-color: $bg-card;
+  }
+}
+
 .project-list-table {
   border-collapse: separate;
   border-spacing: 0 12px;

@@ -106,6 +106,16 @@ const routes = [
         name: "Test",
         component: () => import("../views/Test/index.vue"),
       },
+      {
+        path: "/collection",
+        name: "Collection",
+        component: () => import("../views/Test/Collection.vue"),
+      },
+      {
+        path: "/collection2",
+        name: "Collection2",
+        component: () => import("../views/Test/Collection2.vue"),
+      },
     ],
   },
 
