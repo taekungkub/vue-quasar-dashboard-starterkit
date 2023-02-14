@@ -116,6 +116,33 @@ const routes = [
         name: "Collection2",
         component: () => import("../views/Test/Collection2.vue"),
       },
+      {
+        path: "/room",
+        name: "Room",
+        component: () => import("../views/Test/Room.vue"),
+        meta: {
+          enterClass: "animate__animated animate__fadeIn",
+          leaveClass: "animate__animated animate__fadeOut",
+        },
+      },
+      {
+        path: "/room/detail",
+        name: "RoomDetail",
+        component: () => import("../views/Test/RoomDetail.vue"),
+        meta: {
+          enterClass: "animate__animated animate__fadeIn",
+          leaveClass: "animate__animated animate__fadeOut",
+        },
+      },
+      {
+        path: "/room/detail2",
+        name: "RoomDetail2",
+        component: () => import("../views/Test/RoomDetail2.vue"),
+        meta: {
+          enterClass: "animate__animated animate__fadeIn",
+          leaveClass: "animate__animated animate__fadeOut",
+        },
+      },
     ],
   },
 

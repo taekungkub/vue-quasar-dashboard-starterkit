@@ -25,6 +25,8 @@ dist-ssr
 
 
 src/views/Test/*.vue
+src/views/Test/components/*.vue
+
 public/media/*
 
 

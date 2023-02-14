@@ -1,6 +1,6 @@
 // FILE: main.js
 
-import { Quasar } from "quasar";
+import { Quasar, AppFullscreen } from "quasar";
 import quasarLang from "quasar/lang/th";
 
 // Import icon libraries
@@ -28,6 +28,7 @@ const quasar = {
     myApp.use(Quasar, {
       plugins: {
         Notify,
+        AppFullscreen,
       }, // import Quasar plugins and add here
       lang: quasarLang,
 

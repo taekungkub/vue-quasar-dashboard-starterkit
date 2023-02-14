@@ -148,7 +148,7 @@ export const menuList = [
     icon: "fa-solid fa-campground",
     children: [
       {
-        title: "Test1",
+        title: "Collection Gallery",
         path: "/test",
       },
       {
@@ -158,6 +158,10 @@ export const menuList = [
       {
         title: "Collection 2",
         path: "/collection2",
+      },
+      {
+        title: "Room",
+        path: "/room",
       },
     ],
   },

@@ -6,7 +6,16 @@
 
     <q-page-container>
       <div>
-        <router-view></router-view>
+        <router-view v-slot="{ Component, route }">
+          <div v-if="route.meta.enterClass || route.meta.leaveClass">
+            <transition mode="out-in" :enter-active-class="(route.meta.enterClass as string)" :leave-active-class="(route.meta.leaveClass as string)">
+              <component :is="Component" />
+            </transition>
+          </div>
+          <div v-else>
+            <component :is="Component" />
+          </div>
+        </router-view>
       </div>
     </q-page-container>
   </q-layout>

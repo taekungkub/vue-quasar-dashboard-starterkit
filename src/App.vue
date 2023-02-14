@@ -26,16 +26,9 @@ onMounted(() => {
 
 <style lang="scss">
 @import "./quasar.scss";
+@import url("https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,500;0,700;1,400&display=swap");
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+.text-funny {
+  font-family: "Mali", cursive;
 }
 </style>
