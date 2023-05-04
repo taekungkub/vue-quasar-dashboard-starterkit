@@ -11,6 +11,23 @@ document.documentElement.style.setProperty("--animate-duration", "2s");
 
 // All animations will take half the time to accomplish
 document.documentElement.style.setProperty("--animate-duration", ".5s");
+
+import { Notify } from "quasar";
+import "@quasar/extras/fontawesome-v6/fontawesome-v6.css";
+
+Notify.registerType("my-noti", {
+  icon: "announcement",
+  progress: true,
+  color: "primary",
+  textColor: "white",
+});
+
+Notify.registerType("positive", {
+  icon: "fa-solid fa-circle-check",
+  progress: true,
+  textColor: "blue-8",
+});
+
 const pinia = createPinia();
 const myApp = createApp(App);
 myApp.use(pinia);

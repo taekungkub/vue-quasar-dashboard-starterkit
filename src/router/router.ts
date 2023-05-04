@@ -143,6 +143,11 @@ const routes = [
           leaveClass: "animate__animated animate__fadeOut",
         },
       },
+      {
+        path: "/carousel",
+        name: "Carousel",
+        component: () => import("../views/Test/Carousel.vue"),
+      },
     ],
   },
 

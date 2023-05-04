@@ -163,6 +163,10 @@ export const menuList = [
         title: "Room",
         path: "/room",
       },
+      {
+        title: "Carousel",
+        path: "/carousel",
+      },
     ],
   },
 ];
