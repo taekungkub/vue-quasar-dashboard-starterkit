@@ -167,6 +167,10 @@ export const menuList = [
         title: "Carousel",
         path: "/carousel",
       },
+      {
+        title: "Carousel 2",
+        path: "/carousel2",
+      },
     ],
   },
 ];
