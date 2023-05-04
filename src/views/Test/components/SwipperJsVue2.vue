@@ -27,9 +27,13 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import { onMounted, ref } from "vue";
 const modules = [Navigation, Pagination, Scrollbar, A11y];
 const props = defineProps({
-  slides: { type: Array<String | null>, default: ["https://cdn.quasar.dev/img/mountains.jpg", "https://cdn.quasar.dev/img/parallax1.jpg"] },
+  slides: {
+    type: Array<String | null>,
+    default: ["https://cdn.quasar.dev/img/mountains.jpg", "https://cdn.quasar.dev/img/parallax1.jpg", "https://cdn.quasar.dev/img/parallax2.jpg"],
+  },
 });
 const onSlideChange = (slide: any) => {
   console.log("slide change");

@@ -1,11 +1,10 @@
 <template>
-  <div>
+  <div class="mySwiper">
     <div class="box">
       <q-btn flat round class="review-swiper-button-prev" icon="chevron_left"></q-btn>
       <swiper
-        class="mySwiper"
-        :slides-per-view="1"
-        :space-between="0"
+        :slides-per-view="props.slidePerView"
+        :space-between="props.gap"
         :modules="modules"
         @slideChange="onSlideChange"
         :navigation="{ nextEl: '.review-swiper-button-next', prevEl: '.review-swiper-button-prev' }"
@@ -39,7 +38,20 @@ const modules = [Navigation, Pagination, Scrollbar, A11y];
 const props = defineProps({
   slides: {
     type: Array<String | null>,
-    default: ["https://cdn.quasar.dev/img/mountains.jpg", "https://cdn.quasar.dev/img/parallax1.jpg"],
+    default: [
+      "https://cdn.quasar.dev/img/mountains.jpg",
+      "https://cdn.quasar.dev/img/parallax1.jpg",
+      "https://cdn.quasar.dev/img/parallax2.jpg",
+      "https://cdn.quasar.dev/img/quasar.jpg",
+    ],
+  },
+  slidePerView: {
+    type: Number,
+    default: 1,
+  },
+  gap: {
+    type: Number,
+    default: 0,
   },
 });
 
@@ -53,17 +65,16 @@ const onSlideChange = (slide: any) => {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 500px;
   gap: 10px;
   margin: 0 auto;
 }
 
-.mySwiper {
+.mySwiper .swiper {
   width: 100%;
   height: 100%;
 }
 
-.mySwiper .swiper-slide {
+.mySwiper .swipper .swiper-slide {
   height: 100%;
 }
 
