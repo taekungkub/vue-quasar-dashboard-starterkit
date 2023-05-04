@@ -164,11 +164,11 @@ export const menuList = [
         path: "/room",
       },
       {
-        title: "Carousel",
+        title: "Carousel (quasar)",
         path: "/carousel",
       },
       {
-        title: "Carousel 2",
+        title: "Carousel 2 (SwipperJS)",
         path: "/carousel2",
       },
     ],
