@@ -9,6 +9,7 @@
         @slideChange="onSlideChange"
         :navigation="{ nextEl: '.review-swiper-button-next', prevEl: '.review-swiper-button-prev' }"
         :pagination="{ clickable: true, el: '.swiper-custom-pagination' }"
+        effect="fade"
       >
         <swiper-slide v-for="(slide, index) in props.slides" :key="index">
           <q-img fit="cover" :src="slide" alt="" style="height: 350px" />
@@ -27,13 +28,14 @@
 
 <script setup lang="ts">
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Navigation, Pagination, Scrollbar, A11y, EffectFade } from "swiper";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-const modules = [Navigation, Pagination, Scrollbar, A11y];
+
+const modules = [Navigation, Pagination, Scrollbar, A11y, EffectFade];
 
 const props = defineProps({
   slides: {

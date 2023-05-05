@@ -1,11 +1,11 @@
 <template>
   <div class="q-pa-lg">
     <h6>Outside</h6>
-    <SwipperJSVue my-class="2" />
+    <SwipperJSVue />
     <br />
     <br />
     <h6>Options</h6>
-    <SwipperJSVue :slide-per-view="2" :gap="10" my-class="swiper-custom-pagination1" />
+    <SwipperJSVue :slide-per-view="2" :gap="10" />
     <br />
     <br />
     <h6>Inside</h6>
@@ -17,6 +17,12 @@
     <br />
     <h6>HTML & CSS</h6>
     <SwipperJSVue3 />
+
+    <br />
+    <br />
+
+    <h6>HTML & CSS (Slide per view & gap)</h6>
+    <SwipperJSVue3 :gap="10" :slide-per-view="3" />
 
     <br />
     <br />

@@ -2,10 +2,10 @@
   <div>
     <div class="box2">
       <swiper
+        :modules="modules"
         class="mySwiper2"
         :slides-per-view="1"
         :space-between="0"
-        :modules="modules"
         @slideChange="onSlideChange"
         :pagination="{ clickable: true }"
         :navigation="{ nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }"

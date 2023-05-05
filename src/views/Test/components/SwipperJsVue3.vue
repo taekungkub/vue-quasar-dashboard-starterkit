@@ -1,7 +1,7 @@
 <template>
   <div class="mySlider3">
     <div class="swiper" ref="mySlider3">
-      <div class="swiper-wrapper bg-primary">
+      <div class="swiper-wrapper" v-if="props.slides">
         <div class="swiper-slide" v-for="(slide, index) in props.slides" :key="index">
           <q-img fit="cover" :src="slide" alt="" height="350px" />
         </div>
@@ -20,13 +20,21 @@ import Swiper, { Navigation, Pagination, Autoplay } from "swiper";
 
 const props = defineProps({
   slides: {
-    type: Array<String | null>,
+    type: Array<String>,
     default: [
       "https://cdn.quasar.dev/img/mountains.jpg",
       "https://cdn.quasar.dev/img/parallax1.jpg",
       "https://cdn.quasar.dev/img/parallax2.jpg",
       "https://cdn.quasar.dev/img/parallax2.jpg",
     ],
+  },
+  slidePerView: {
+    type: Number,
+    default: 1,
+  },
+  gap: {
+    type: Number,
+    default: 0,
   },
 });
 
@@ -35,6 +43,8 @@ onMounted(() => {
   new Swiper(mySlider3.value, {
     modules: [Navigation, Pagination, Autoplay],
     effect: "flip",
+    slidesPerView: props.slidePerView,
+    spaceBetween: props.gap,
     pagination: {
       clickable: true,
       el: ".swiper-pagination",
