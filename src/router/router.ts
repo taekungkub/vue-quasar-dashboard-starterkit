@@ -1,6 +1,6 @@
-import { createRouter, createWebHashHistory, createWebHistory, Router } from "vue-router";
+import { createRouter, createWebHashHistory, createWebHistory, Router } from "vue-router"
 
-import Home from "../views/Home.vue";
+import Home from "../views/Home.vue"
 
 const routes = [
   {
@@ -220,12 +220,12 @@ const routes = [
       },
     ],
   },
-];
+]
 
 const router = createRouter({
   // 4. Provide the history implementation to use. We are using the hash history for simplicity here.
   history: createWebHashHistory(),
   routes, // short for `routes: routes`
-});
+})
 
-export default router;
+export default router
