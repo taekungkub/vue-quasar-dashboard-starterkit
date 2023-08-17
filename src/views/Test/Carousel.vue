@@ -76,19 +76,19 @@
 </template>
 
 <script setup lang="ts">
-import { QCarousel, QCarouselControl, useQuasar } from "quasar";
-import { ref } from "vue";
+import { QCarousel, QCarouselControl, useQuasar } from "quasar"
+import { ref } from "vue"
 
-const carousel = ref<QCarousel>();
+const carousel = ref<QCarousel>()
 
-let slide = ref("style");
-const $q = useQuasar();
+let slide = ref("style")
+const $q = useQuasar()
 
 function triggerCustomRegisteredType1() {
   $q.notify({
     type: "positive",
     message: "This notification is using a custom type.",
-  });
+  })
 }
 </script>
 

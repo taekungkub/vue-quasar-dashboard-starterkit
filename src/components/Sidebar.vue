@@ -144,28 +144,28 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import { menuList } from "../config/mockData";
-import { useSettingStore } from "../store/setting";
-import { useDark, useToggle } from "@vueuse/core";
-import { useQuasar } from "quasar";
+import { ref } from "vue"
+import { menuList } from "../config/mockData"
+import { useSettingStore } from "../store/setting"
+import { useDark, useToggle } from "@vueuse/core"
+import { useQuasar } from "quasar"
 
-const setting = useSettingStore();
-const $q = useQuasar();
+const setting = useSettingStore()
+const $q = useQuasar()
 const isDark = useDark({
   onChanged(dark: boolean) {
     if (dark) {
-      $q.dark.set(true);
-      document.documentElement.classList.add("dark");
-      setting.setTheme("dark");
+      $q.dark.set(true)
+      document.documentElement.classList.add("dark")
+      setting.setTheme("dark")
     } else {
-      $q.dark.set(false);
-      document.documentElement.classList.remove("dark");
-      setting.setTheme("light");
+      $q.dark.set(false)
+      document.documentElement.classList.remove("dark")
+      setting.setTheme("light")
     }
   },
-});
-const toggleDark = useToggle(isDark);
+})
+const toggleDark = useToggle(isDark)
 </script>
 
 <style lang="scss" scoped>

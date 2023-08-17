@@ -153,6 +153,11 @@ const routes = [
         name: "Carousel2",
         component: () => import("../views/Test/Carousel2.vue"),
       },
+      {
+        path: "/lottie",
+        name: "Lottie",
+        component: () => import("../views/Test/Lottie.vue"),
+      },
     ],
   },
 

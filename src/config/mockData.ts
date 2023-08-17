@@ -171,6 +171,10 @@ export const menuList = [
         title: "Carousel 2 (SwipperJS)",
         path: "/carousel2",
       },
+      {
+        title: "Lottie",
+        path: "/lottie",
+      },
     ],
   },
 ]
