@@ -175,6 +175,10 @@ export const menuList = [
         title: "Lottie",
         path: "/lottie",
       },
+      {
+        title: "Form address autocomplete",
+        path: "/form-autocomplete",
+      },
     ],
   },
 ]

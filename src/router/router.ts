@@ -158,6 +158,11 @@ const routes = [
         name: "Lottie",
         component: () => import("../views/Test/Lottie.vue"),
       },
+      {
+        path: "/form-autocomplete",
+        name: "FormAutocomplete",
+        component: () => import("../views/Test/FormAutocomplete.vue"),
+      },
     ],
   },
 
