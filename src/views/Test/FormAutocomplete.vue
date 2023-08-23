@@ -1,22 +1,27 @@
 <template>
   <div class="q-pa-lg">
-    <h6>Form Autocomplete address</h6>
+    <h6>Form Thai Autocomplete Address</h6>
 
     {{ formState }}
 
-    <q-form ref="myForm" @submit.prevent="onSubmitLogin">
-      <InputAutocomplete v-model="formState.district" label="district" type="district" @select="handleSelect" :rules="[(val:any) => !!val || 'required' ]" />
-      <InputAutocomplete v-model="formState.amphoe" label="amphoe" type="amphoe" @select="handleSelect" :rules="[(val:any) => !!val || 'required' ]" />
-      <q-select v-model="formState.province" :options="options" label="province" :rules="[(val:any) => !!val || 'required' ]" />
-      <InputAutocomplete
-        v-model="formState.zipcode"
-        label="zipcode"
-        type="zipcode"
-        @select="handleSelect"
-        :rules="[(val:any) => !!val || 'required' , (val:string) => val.length < 6 || 'zipcode invalid', (val:string)=> validateNumber(val) || 'number only']"
-      />
-      <q-btn color="primary" type="submit">Submit</q-btn>
-    </q-form>
+    <q-card class="q-mt-md">
+      <q-card-section>
+        <q-form ref="myForm" @submit.prevent="onSubmitLogin">
+          <InputAutocomplete v-model="formState.district" label="แขวง/ตำบล" type="district" @select="handleSelect" :rules="[(val:any) => !!val || 'required' ]" />
+
+          <InputAutocomplete v-model="formState.amphoe" label="เขต/อำเภอ" type="amphoe" @select="handleSelect" :rules="[(val:any) => !!val || 'required' ]" />
+          <q-select v-model="formState.province" :options="options" label="จังหวัด" :rules="[(val:any) => !!val || 'required' ]" />
+          <InputAutocomplete
+            v-model="formState.zipcode"
+            label="zipcode"
+            type="zipcode"
+            @select="handleSelect"
+            :rules="[(val:any) => !!val || 'required' , (val:string) => val.length < 6 || 'zipcode invalid', (val:string)=> validateNumber(val) || 'number only']"
+          />
+          <q-btn color="primary" type="submit">Submit</q-btn>
+        </q-form>
+      </q-card-section>
+    </q-card>
   </div>
 </template>
 

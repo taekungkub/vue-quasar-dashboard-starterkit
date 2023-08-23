@@ -66,8 +66,8 @@ const emit = defineEmits(["update:modelValue", "select"])
 const hasFocus = ref(false)
 const isOpenListContainer = ref(false)
 const inputRef = ref()
-let itemOnFocus = ref(0)
 const dropdownRef = ref()
+const itemOnFocus = ref(0)
 
 watch(
   () => hasFocus.value,
@@ -78,7 +78,7 @@ watch(
   }
 )
 
-const resultsFromSearch = computed(() => {
+const resultsFromSearch = computed<AddressTy[]>(() => {
   if (props.type === "district") {
     return resultsFromSearchByDistrict()
   } else if (props.type === "amphoe") {
