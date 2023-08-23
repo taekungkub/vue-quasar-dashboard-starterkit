@@ -163,18 +163,18 @@ function moveScrollOfListContainer() {
   position: absolute;
   max-height: 300px;
   overflow: auto;
-  background-color: #ffffff;
+  background-color: #fff;
   border-top: solid 1px #f1f1f1;
-  border-radius: 4px;
-  box-shadow: 0 2px 3px hsla(0, 0%, 4%, 0.1), 0 0 0 1px hsla(0, 0%, 4%, 0.1);
+  border-radius: 6px;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.18);
 }
 
 .item {
-  padding: 14px;
+  padding: 16px;
   cursor: pointer;
   border-bottom: 1px solid #eeeeee;
   &:hover {
-    background-color: rgba($color: #bdbdbd, $alpha: 0.3);
+    background-color: rgba($color: #e1e3e5, $alpha: 1);
   }
   &:last-child {
     border-bottom: 1px solid transparent;
