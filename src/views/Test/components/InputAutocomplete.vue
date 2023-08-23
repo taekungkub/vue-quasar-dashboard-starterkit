@@ -15,11 +15,11 @@
 
       <div class="list_container" ref="dropdownRef" v-if="resultsFromSearch.length && isOpenListContainer === true">
         <div
-          class="item"
-          :style="{
-            'background-color': itemOnFocus === index ? '#EEEEEE' : '#fff',
-          }"
           v-for="(item, index) in resultsFromSearch"
+          class="item"
+          :class="{
+            itemFocus: itemOnFocus === index,
+          }"
           :key="index"
           @mouseover="itemOnFocus = index"
           @mouseout="itemOnFocus = -1"
@@ -128,7 +128,6 @@ function pressArrow(direction: "up" | "down") {
 function pressEnter() {
   emit("select", resultsFromSearch.value[itemOnFocus.value])
 }
-
 /**
  * เลื่อน scroll bar ตาม Item ที่เลือก
  */
@@ -163,21 +162,21 @@ function moveScrollOfListContainer() {
   position: absolute;
   max-height: 300px;
   overflow: auto;
-  background-color: #fff;
-  border-top: solid 1px #f1f1f1;
   border-radius: 6px;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.18);
-}
+  background-color: var(--bg-card);
 
-.item {
-  padding: 16px;
-  cursor: pointer;
-  border-bottom: 1px solid #eeeeee;
-  &:hover {
-    background-color: rgba($color: #e1e3e5, $alpha: 1);
+  .item {
+    padding: 16px;
+    cursor: pointer;
+    border-bottom: 1px solid #eeeeee;
+    &:last-child {
+      border-bottom: 1px solid transparent;
+    }
   }
-  &:last-child {
-    border-bottom: 1px solid transparent;
+
+  .itemFocus {
+    background-color: rgba($color: $grey-5, $alpha: 0.3);
   }
 }
 </style>
