@@ -141,44 +141,44 @@ export const menuList = [
     ],
   },
 
-  {
-    title: "Test",
-    path: "/test",
-    isDropdown: true,
-    icon: "fa-solid fa-campground",
-    children: [
-      {
-        title: "Collection Gallery",
-        path: "/test",
-      },
-      {
-        title: "Collection",
-        path: "/collection",
-      },
-      {
-        title: "Collection 2",
-        path: "/collection2",
-      },
-      {
-        title: "Room",
-        path: "/room",
-      },
-      {
-        title: "Carousel (quasar)",
-        path: "/carousel",
-      },
-      {
-        title: "Carousel 2 (SwipperJS)",
-        path: "/carousel2",
-      },
-      {
-        title: "Lottie",
-        path: "/lottie",
-      },
-      {
-        title: "Form address autocomplete",
-        path: "/form-autocomplete",
-      },
-    ],
-  },
+  // {
+  //   title: "Test",
+  //   path: "/test",
+  //   isDropdown: true,
+  //   icon: "fa-solid fa-campground",
+  //   children: [
+  //     {
+  //       title: "Collection Gallery",
+  //       path: "/test",
+  //     },
+  //     {
+  //       title: "Collection",
+  //       path: "/collection",
+  //     },
+  //     {
+  //       title: "Collection 2",
+  //       path: "/collection2",
+  //     },
+  //     {
+  //       title: "Room",
+  //       path: "/room",
+  //     },
+  //     {
+  //       title: "Carousel (quasar)",
+  //       path: "/carousel",
+  //     },
+  //     {
+  //       title: "Carousel 2 (SwipperJS)",
+  //       path: "/carousel2",
+  //     },
+  //     {
+  //       title: "Lottie",
+  //       path: "/lottie",
+  //     },
+  //     {
+  //       title: "Form address autocomplete",
+  //       path: "/form-autocomplete",
+  //     },
+  //   ],
+  // },
 ]

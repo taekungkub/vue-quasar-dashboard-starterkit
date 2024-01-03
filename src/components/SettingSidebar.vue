@@ -30,14 +30,14 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import { useSettingStore } from "../store/setting";
+import { ref } from "vue"
+import { useSettingStore } from "../store/setting"
 
-const setting = useSettingStore();
+const setting = useSettingStore()
 
-const value1 = ref(false);
-const value2 = ref(false);
-const value3 = ref(false);
+const value1 = ref(false)
+const value2 = ref(false)
+const value3 = ref(false)
 </script>
 
 <style scoped></style>
